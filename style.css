@@ -1,0 +1,96 @@
+body {
+  background: #f7f7f7;
+  margin: 20px;
+}
+
+#ativar {
+  display: block;
+  margin: 20px auto;
+}
+
+#modal {
+  padding: 30px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1 1 rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#modal h1 {
+  font-family: sans-serif;
+  margin: 0px 0px 20px;
+}
+
+#modal label {
+  display: block;
+  font-family: sans-serif;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#modal input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #f7f7f7;
+}
+
+#modal button {
+  margin-top: 20px;
+  display: block;
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  border: none;
+  background: #ffb801;
+  border-radius: 4px;
+  color: #402d00;
+  cursor: pointer;
+}
+
+#modal.animar {
+  /*elementos usados para criar a animação (basicamente funciona com animation-name, animation-duration e animation-fill-mode*/
+  animation-name: slide; /*chama a animação */
+  animation-duration: 0.2s;
+  animation-timing-function: ease; /**/
+  animation-delay: 0s; /*atraso para começar*/
+  animation-iteration-count: 1; /*quantas vezes irá acontecer*/
+  animation-direction: normal; /*direção da animação*/ /*normal/reverse*/
+  animation-fill-mode: forwards; /* faz a animação permanecer no ultimo estado, ou seja, não retornar ao estado inicial*/
+  animation-play-state: running;
+
+  /* animation: slide, .3s forwards;  também da pra escrever tudo isso em uma linha*/
+}
+
+#modal {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+@keyframes slide {
+  /*cria a animação */
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#load {
+  width: 20px;
+  height: 20px;
+  border: 10px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  margin: 0 auto;
+  color: #ffb801;
+  animation: loader 0.6s linear infinite;
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
